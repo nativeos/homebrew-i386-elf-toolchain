@@ -6,8 +6,6 @@ class I386ElfBinutils < Formula
   sha256 "82a40a37b13a12facb36ac7e87846475a1d80f2e63467b1b8d63ec8b6a2b63fc"
 
   def install
-    # ENV.deparallelize  # if your formula fails when building in parallel
-
     mkdir "binutils-build" do
       system "../configure", "--prefix=#{prefix}",
                              "--target=i386-elf",
