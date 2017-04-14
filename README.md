@@ -13,4 +13,4 @@ MacOS X. I don't know whether this will work with Linuxbrew.
 Tap the repository and install the packages.
 
     brew tap nativeos/i386-elf-toolchain
-    brew install i386-elf-binutils
+    brew install i386-elf-binutils i386-elf-gcc
