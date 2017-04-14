@@ -9,7 +9,6 @@ class I386ElfGcc < Formula
   depends_on "i386-elf-binutils"
   depends_on "libmpc"
   depends_on "mpfr" => :build
-  depends_on "wget" => :build
 
   def install
     mkdir "gcc-build" do
