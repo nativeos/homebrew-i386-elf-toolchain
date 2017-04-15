@@ -27,5 +27,5 @@ install:
   - brew tap --repair
 
 script:
-  - brew install $PACKAGE
+  - brew install -v $PACKAGE
   - brew test $PACKAGE
