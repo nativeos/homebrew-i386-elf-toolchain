@@ -20,6 +20,6 @@ class I386ElfGdb < Formula
   end
 
   test do
-    system "false"
+    system "i386-elf-gdb", "--version"
   end
 end
