@@ -1,9 +1,9 @@
 class I386ElfBinutils < Formula
   desc "GNU Binutils targetting i386-elf"
   homepage "https://www.gnu.org/software/binutils/"
-  url "http://ftpmirror.gnu.org/binutils/binutils-2.25.1.tar.gz"
-  version "2.25.1"
-  sha256 "82a40a37b13a12facb36ac7e87846475a1d80f2e63467b1b8d63ec8b6a2b63fc"
+  url "http://ftpmirror.gnu.org/binutils/binutils-2.28.tar.bz2"
+  version "2.28"
+  sha256 "6297433ee120b11b4b0a1c8f3512d7d73501753142ab9e2daa13c5a3edd32a72"
 
   def install
     mkdir "binutils-build" do
