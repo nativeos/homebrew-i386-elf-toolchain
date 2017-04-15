@@ -18,6 +18,7 @@ class I386ElfGcc < Formula
                              "--disable-nls",
                              "--disable-werror",
                              "--without-headers",
+                             "--without-isl",
                              "--enable-languages=c,c++"
 
       system "make", "all-gcc"
