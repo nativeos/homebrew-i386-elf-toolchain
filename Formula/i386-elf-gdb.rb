@@ -1,9 +1,9 @@
 class I386ElfGdb < Formula
   desc "GNU Project Debugger targetting i386-elf"
   homepage "https://www.gnu.org/software/gdb/"
-  url "http://ftpmirror.gnu.org/gnu/gdb/gdb-7.12.tar.gz"
-  version "7.12"
-  sha256 "149abac4add030a5713f15964bd7465bef7a23712bcc91377ca40949f33e93fb"
+  url "http://ftpmirror.gnu.org/gnu/gdb/gdb-8.0.tar.xz"
+  version "8.0"
+  sha256 "f6a24ffe4917e67014ef9273eb8b547cb96a13e5ca74895b06d683b391f3f4ee"
 
   def install
     system "./configure", "--prefix=#{prefix}",
