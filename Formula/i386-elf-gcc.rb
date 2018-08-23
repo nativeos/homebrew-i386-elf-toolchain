@@ -1,9 +1,9 @@
 class I386ElfGcc < Formula
   desc "GNU Compiler Collection targetting i386-elf"
   homepage "https://gcc.gnu.org"
-  url "https://ftp.gnu.org/gnu/gcc/gcc-6.3.0/gcc-6.3.0.tar.bz2"
-  version "6.3.0"
-  sha256 "f06ae7f3f790fbf0f018f6d40e844451e6bc3b7bc96e128e63b09825c1f8b29f"
+  url "https://ftp.gnu.org/gnu/gcc/gcc-4.8.2/gcc-4.8.2.tar.bz2"
+  version "4.8.2"
+
 
   depends_on "gmp" => :build
   depends_on "i386-elf-binutils"
