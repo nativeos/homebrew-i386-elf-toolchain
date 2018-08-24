@@ -1,8 +1,8 @@
 class I386ElfBinutils < Formula
   desc "GNU Binutils targetting i386-elf"
   homepage "https://www.gnu.org/software/binutils/"
-  url "https://sourceware.org/pub/binutils/releases/binutils-2.24.tar.bz2"
-  version "2.24"
+  url "https://sourceware.org/pub/binutils/releases/binutils-2.31.tar.xz"
+  version "2.31"
  
 
   def install
