@@ -1,9 +1,9 @@
 class I386ElfGcc < Formula
   desc "GNU Compiler Collection targetting i386-elf"
   homepage "https://gcc.gnu.org"
-  url "http://ftpmirror.gnu.org/gcc/gcc-7.3.0/gcc-7.3.0.tar.xz"
-  version "7.3.0"
-  sha256 "832ca6ae04636adbb430e865a1451adf6979ab44ca1c8374f61fba65645ce15c"
+  url "http://ftpmirror.gnu.org/gcc/gcc-9.2.0/gcc-9.2.0.tar.xz"
+  version "9.2.0"
+  sha256 "ea6ef08f121239da5695f76c9b33637a118dcf63e24164422231917fa61fb206"
 
 
   depends_on "gmp" => :build
