@@ -1,4 +1,4 @@
-name: Build
+name: Build and test i386-elf-gdb
 
 on: [push]
 
@@ -7,18 +7,14 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
-      
+
       # We do this manually because of course we want to build the tap from the current commit.
     - name: Install the tap
       run: |
         mkdir -p $(brew --repo)/Library/Taps/nativeos
         ln -s $PWD $(brew --repo)/Library/Taps/nativeos/homebrew-i386-elf-toolchain
         brew tap --repair
-    - name: Build i386-elf-binutils
-      run: brew install i386-elf-binutils
-    - name: Test i386-elf-binutils
-      run: brew test i386-elf-binutils
-    - name: Build i386-elf-gcc
-      run: brew install i386-elf-gcc
-    - name: Test i386-elf-gcc
-      run: brew test i386-elf-gcc
+    - name: Build i386-elf-gdb
+      run: brew install nativeos/i386-elf-toolchain/i386-elf-gdb
+    - name: Test i386-elf-gdb
+      run: brew test nativeos/i386-elf-toolchain/i386-elf-gdb
