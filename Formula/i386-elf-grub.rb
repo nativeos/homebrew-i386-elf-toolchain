@@ -1,11 +1,11 @@
 class I386ElfGrub < Formula
   desc "GNU GRUB 2 targetting i386-elf"
   homepage "https://www.gnu.org/software/grub/"
-  url "https://ftp.gnu.org/gnu/grub/grub-2.02.tar.xz"
-  version "2.02"
-  sha256 "810b3798d316394f94096ec2797909dbf23c858e48f7b3830826b8daa06b7b0f"
+  url "https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz"
+  version "2.06"
+  sha256 "b79ea44af91b93d17cd3fe80bdae6ed43770678a9a5ae192ccea803ebb657ee1"
 
-  depends_on "i386-elf-gcc"
+  depends_on "nativeos/i386-elf-toolchain/i386-elf-gcc"
 
   def install
     mkdir "grub-build" do
