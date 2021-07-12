@@ -1,15 +1,15 @@
 class I386ElfGcc < Formula
   desc "GNU Compiler Collection targetting i386-elf"
   homepage "https://gcc.gnu.org"
-  url "http://ftpmirror.gnu.org/gcc/gcc-11.1.0/gcc-11.1.0.tar.xz"
+  url "https://ftp.gnu.org/gcc/gcc-11.1.0/gcc-11.1.0.tar.xz"
   version "11.1.0"
   sha256 "4c4a6fb8a8396059241c2e674b85b351c26a5d678274007f076957afa1cc9ddf"
-
+  revision 2
 
   depends_on "gmp" => :build
+  depends_on "mpfr" => :build
   depends_on "i386-elf-binutils"
   depends_on "libmpc"
-  depends_on "mpfr" => :build
 
   def install
     mkdir "gcc-build" do
@@ -31,9 +31,8 @@ class I386ElfGcc < Formula
       # It doesn't look for i386-elf-as on $PREFIX/bin. Rather, it looks
       # for as on $PREFIX/$TARGET/bin/ ($PREFIX/i386-elf/bin/as).
       binutils = Formula["i386-elf-binutils"].prefix
-      FileUtils.ln_sf "#{binutils}/i386-elf", "#{prefix}/i386-elf"
+      ln_sf "#{binutils}/i386-elf", "#{prefix}/i386-elf"
     end
-
   end
 
   test do

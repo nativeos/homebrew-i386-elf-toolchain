@@ -4,7 +4,7 @@ class I386ElfBinutils < Formula
   url "https://sourceware.org/pub/binutils/releases/binutils-2.36.1.tar.xz"
   version "2.36.1"
   sha256 "e81d9edf373f193af428a0f256674aea62a9d74dfe93f65192d4eae030b0f3b0"
- 
+  revision 2
 
   def install
     mkdir "binutils-build" do

@@ -4,6 +4,7 @@ class I386ElfGdb < Formula
   url "https://ftp.gnu.org/gnu/gdb/gdb-10.2.tar.xz"
   version "10.2"
   sha256 "aaa1223d534c9b700a8bec952d9748ee1977513f178727e1bee520ee000b4f29"
+  revision 2
 
   def install
     system "./configure", "--prefix=#{prefix}",
@@ -15,8 +16,8 @@ class I386ElfGdb < Formula
     system "make", "install"
 
     # Conflict with i386-elf-binutils
-    FileUtils.rm_rf "#{prefix}/share/info"
-    FileUtils.rm_rf "#{prefix}/share/locale"
+    rm_rf info
+    rm_rf "#{share}/locale"
   end
 
   test do
