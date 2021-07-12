@@ -1,10 +1,8 @@
-name: brew test-bot
-on: [push, pull_request]
+name: test-bot
+on: [push]
 jobs:
-  test-bot:
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest]
-    runs-on: ${{ matrix.os }}
+  testbot:
+    name: Testbot
+    runs-on: ubuntu-latest
     steps:
-      - run: uname -a
+      - run: uname
