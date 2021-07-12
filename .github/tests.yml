@@ -4,10 +4,7 @@ on:
   pull_request:
 jobs:
   test-bot:
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest, macos-10.15]
-    runs-on: ${{ matrix.os }}
+    runs-on: macos-latest
     steps:
       - name: Set up Homebrew
         id: set-up-homebrew
