@@ -1,5 +1,7 @@
 # i386-elf-toolchain tap
 
+![GCC toolchain for i386](banner.png)
+
 This tap provides Homebrew formulas to build a suitable compiler for the
 i386-elf toolchain, which is useful to build 32 bit freestanding
 applications such as kernels using the GNU toolchain.
