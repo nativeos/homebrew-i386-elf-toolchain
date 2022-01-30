@@ -9,11 +9,15 @@ test other kernels.
 
 | package | version | notes |
 | ----------------- | --- | --- |
-| i386-elf-binutils | 2.36.1 | |
+| i386-elf-binutils | 2.37 | |
 | i386-elf-gcc | 11.1.0 | Not to be confused with the i386-elf-gcc in homebrew/core. Depends on nativeos/i386-elf-toolchain/i386-elf-binutils |
 | i386-elf-gdb | 10.2.0 | Not to be confused with the i386-elf-gdb in homebrew/core |
 | i386-elf-grub | 2.0.6 | Depends on nativeos/i386-elf-toolchain/i386-elf-gcc |
 | --- | --- | --- |
+
+Old versions ported:
+
+* For binutils: 2.36.1 (`nativeos/i386-elf-toolchain/i386-elf-binutils@2.36.1`).
 
 ## How to use
 
