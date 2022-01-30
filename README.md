@@ -20,7 +20,7 @@ I test this tap in macOS and Linux.
   --------------------------------- --------- -----------------------------------------------
   i386-elf-binutils                 2.37
 
-  i386-elf-gcc                      11.1.0    Not to be confused with the i386-elf-gcc in
+  i386-elf-gcc                      11.2.0    Not to be confused with the i386-elf-gcc in
                                               homebrew/core. Depends on
                                               nativeos/i386-elf-toolchain/i386-elf-binutils
 
@@ -35,6 +35,8 @@ Old versions ported:
 
 -   For binutils: 2.36.1
     (`nativeos/i386-elf-toolchain/i386-elf-binutils@2.36.1`).
+-   For gcc: 11.1.0
+    (`nativeos/i386-elf-toolchain/i386-elf-gcc@11.1`).
 
 ## How to use
 

@@ -1,14 +1,14 @@
-class I386ElfGcc < Formula
+class I386ElfGccAT111 < Formula
   desc "GNU Compiler Collection targetting i386-elf"
   homepage "https://gcc.gnu.org"
-  url "https://ftp.gnu.org/gnu/gcc/gcc-11.2.0/gcc-11.2.0.tar.xz"
-  version "11.2.0"
-  sha256 "d08edc536b54c372a1010ff6619dd274c0f1603aa49212ba20f7aa2cda36fa8b"
-  revision 1
+  url "https://ftp.gnu.org/gnu/gcc/gcc-11.1.0/gcc-11.1.0.tar.xz"
+  version "11.1.0"
+  sha256 "4c4a6fb8a8396059241c2e674b85b351c26a5d678274007f076957afa1cc9ddf"
+  revision 2
 
   depends_on "gmp" => :build
   depends_on "mpfr" => :build
-  depends_on "nativeos/i386-elf-toolchain/i386-elf-binutils"
+  depends_on "i386-elf-binutils"
   depends_on "libmpc"
 
   def install
