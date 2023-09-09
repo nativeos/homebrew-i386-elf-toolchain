@@ -3,7 +3,7 @@ class I386ElfGcc < Formula
   homepage "https://gcc.gnu.org"
   url "https://ftp.gnu.org/gnu/gcc/gcc-12.2.0/gcc-12.2.0.tar.xz"
   sha256 "e549cf9cf3594a00e27b6589d4322d70e0720cdd213f39beb4181e06926230ff"
-  revision 1
+  revision 2
 
   depends_on "gmp" => :build
   depends_on "mpfr" => :build
@@ -35,6 +35,7 @@ class I386ElfGcc < Formula
   end
 
   test do
+    # should try to compile something?
     system "#{bin}/i386-elf-gcc", "--version"
   end
 end

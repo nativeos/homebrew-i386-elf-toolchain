@@ -3,7 +3,7 @@ class I386ElfBinutilsAT2361 < Formula
   homepage "https://www.gnu.org/software/binutils/"
   url "https://sourceware.org/pub/binutils/releases/binutils-2.36.1.tar.xz"
   sha256 "e81d9edf373f193af428a0f256674aea62a9d74dfe93f65192d4eae030b0f3b0"
-  revision 2
+  revision 3
 
   def install
     mkdir "binutils-build" do
@@ -18,6 +18,6 @@ class I386ElfBinutilsAT2361 < Formula
   end
 
   test do
-    system "i386-elf-as", "--version"
+    system "#{bin}/i386-elf-as", "--version"
   end
 end
