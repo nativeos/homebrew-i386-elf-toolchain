@@ -2,7 +2,6 @@ class I386ElfGdb < Formula
   desc "GNU Project Debugger targetting i386-elf"
   homepage "https://www.gnu.org/software/gdb/"
   url "https://ftp.gnu.org/gnu/gdb/gdb-10.2.tar.xz"
-  version "10.2"
   sha256 "aaa1223d534c9b700a8bec952d9748ee1977513f178727e1bee520ee000b4f29"
   revision 2
 
@@ -21,6 +20,6 @@ class I386ElfGdb < Formula
   end
 
   test do
-    system "i386-elf-gdb", "--version"
+    system "#{bin}/i386-elf-gdb", "--version"
   end
 end

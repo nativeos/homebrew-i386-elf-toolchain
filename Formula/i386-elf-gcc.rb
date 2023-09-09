@@ -2,7 +2,6 @@ class I386ElfGcc < Formula
   desc "GNU Compiler Collection targetting i386-elf"
   homepage "https://gcc.gnu.org"
   url "https://ftp.gnu.org/gnu/gcc/gcc-12.2.0/gcc-12.2.0.tar.xz"
-  version "12.2.0"
   sha256 "e549cf9cf3594a00e27b6589d4322d70e0720cdd213f39beb4181e06926230ff"
   revision 1
 
@@ -36,6 +35,6 @@ class I386ElfGcc < Formula
   end
 
   test do
-    system "i386-elf-gcc", "--version"
+    system "#{bin}/i386-elf-gcc", "--version"
   end
 end
