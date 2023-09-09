@@ -35,6 +35,7 @@ class I386ElfGcc < Formula
   end
 
   test do
+    # should try to compile something?
     system "#{bin}/i386-elf-gcc", "--version"
   end
 end

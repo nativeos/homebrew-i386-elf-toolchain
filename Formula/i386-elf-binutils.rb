@@ -18,6 +18,6 @@ class I386ElfBinutils < Formula
   end
 
   test do
-    system "i386-elf-as", "--version"
+    system "#{bin}/i386-elf-as", "--version"
   end
 end

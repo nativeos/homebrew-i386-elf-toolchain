@@ -35,6 +35,6 @@ class I386ElfGccAT111 < Formula
   end
 
   test do
-    system "i386-elf-gcc", "--version"
+    system "#{bin}/i386-elf-gcc", "--version"
   end
 end
