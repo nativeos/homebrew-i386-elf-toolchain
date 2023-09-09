@@ -25,6 +25,6 @@ class I386ElfGrub < Formula
   end
 
   test do
-    system "#{bin}/grub-shell", "--version"
+    system "#{bin}/grub-file", "--usage"
   end
 end
