@@ -3,7 +3,7 @@ class I386ElfGccAT112 < Formula
   homepage "https://gcc.gnu.org"
   url "https://ftp.gnu.org/gnu/gcc/gcc-11.2.0/gcc-11.2.0.tar.xz"
   sha256 "d08edc536b54c372a1010ff6619dd274c0f1603aa49212ba20f7aa2cda36fa8b"
-  revision 1
+  revision 2
 
   depends_on "gmp" => :build
   depends_on "mpfr" => :build

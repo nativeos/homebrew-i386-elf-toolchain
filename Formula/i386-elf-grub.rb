@@ -3,6 +3,7 @@ class I386ElfGrub < Formula
   homepage "https://www.gnu.org/software/grub/"
   url "https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz"
   sha256 "b79ea44af91b93d17cd3fe80bdae6ed43770678a9a5ae192ccea803ebb657ee1"
+  revision 1
 
   depends_on "nativeos/i386-elf-toolchain/i386-elf-gcc"
 
