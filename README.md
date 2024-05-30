@@ -22,10 +22,10 @@ Default version is marked in bold. For older versions, you must use the
 @.
 
 -   i386-elf-binutils
-    -   **2.37 (`nativeos/i386-elf-toolchain/i386-elf-binutils`)**
+    -   **2.42 (`nativeos/i386-elf-toolchain/i386-elf-binutils`)**
     -   2.36.1 (`nativeos/i386-elf-toolchain/i386-elf-binutils@2.36.1`)
 -   i386-elf-gcc
-    -   **12.2.0 (`nativeos/i386-elf-toolchain/i386-elf-gcc`)**
+    -   **14.1.0 (`nativeos/i386-elf-toolchain/i386-elf-gcc`)**
     -   11.2.0 (`nativeos/i386-elf-toolchain/i386-elf-gcc@11.2`).
     -   11.1.0 (`nativeos/i386-elf-toolchain/i386-elf-gcc@11.1`).
 -   i386-elf-gdb

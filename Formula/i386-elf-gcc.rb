@@ -35,7 +35,13 @@ class I386ElfGcc < Formula
   end
 
   test do
-    # should try to compile something?
-    system "#{bin}/i386-elf-gcc", "--version"
+    (testpath/"program.c").write <<~DATA
+    int sum(int a, int b) {
+      return a + b;
+    }
+    DATA
+    system "#{bin}/i386-elf-gcc", "-c", "program.c"
+    binutils = Formula["nativeos/i386-elf-toolchain/i386-elf-binutils"].prefix
+    assert_match "file format elf32-i386", shell_output("#{binutils}/bin/i386-elf-objdump -D program.o")
   end
 end

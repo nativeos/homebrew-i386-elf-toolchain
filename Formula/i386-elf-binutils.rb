@@ -1,9 +1,11 @@
 class I386ElfBinutils < Formula
   desc "GNU Binutils targetting i386-elf"
   homepage "https://www.gnu.org/software/binutils/"
-  url "https://sourceware.org/pub/binutils/releases/binutils-2.37.tar.xz"
-  sha256 "820d9724f020a3e69cb337893a0b63c2db161dadcb0e06fc11dc29eb1e84a32c"
-  revision 2
+  url "https://sourceware.org/pub/binutils/releases/binutils-2.42.tar.xz"
+  sha256 "f6e4d41fd5fc778b06b7891457b3620da5ecea1006c6a4a41ae998109f85a800"
+  revision 1
+
+  depends_on "texinfo" => :build
 
   def install
     mkdir "binutils-build" do
@@ -11,13 +13,21 @@ class I386ElfBinutils < Formula
                              "--target=i386-elf",
                              "--disable-multilib",
                              "--disable-nls",
-                             "--disable-werror"
+                             "--disable-werror",
+                             "--enable-interwork"
       system "make"
       system "make", "install"
     end
   end
 
   test do
-    system "#{bin}/i386-elf-as", "--version"
+    (testpath/"program.S").write <<~DATA
+    .text
+    example:
+        movl 0x80, %eax
+        movl 0x40, %ebx     
+    DATA
+    system "#{bin}/i386-elf-as", "program.S"
+    assert_match "file format elf32-i386", shell_output("#{bin}/i386-elf-objdump -D a.out")
   end
 end
