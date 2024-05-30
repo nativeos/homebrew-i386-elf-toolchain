@@ -1,9 +1,9 @@
 class I386ElfGcc < Formula
   desc "GNU Compiler Collection targetting i386-elf"
   homepage "https://gcc.gnu.org"
-  url "https://ftp.gnu.org/gnu/gcc/gcc-12.2.0/gcc-12.2.0.tar.xz"
-  sha256 "e549cf9cf3594a00e27b6589d4322d70e0720cdd213f39beb4181e06926230ff"
-  revision 2
+  url "https://ftp.gnu.org/gnu/gcc/gcc-14.1.0/gcc-14.1.0.tar.xz"
+  sha256 "e283c654987afe3de9d8080bc0bd79534b5ca0d681a73a11ff2b5d3767426840"
+  revision 1
 
   depends_on "gmp" => :build
   depends_on "mpfr" => :build
@@ -29,7 +29,7 @@ class I386ElfGcc < Formula
       # GCC needs this folder in #{prefix} in order to see the binutils.
       # It doesn't look for i386-elf-as on $PREFIX/bin. Rather, it looks
       # for as on $PREFIX/$TARGET/bin/ ($PREFIX/i386-elf/bin/as).
-      binutils = Formula["i386-elf-binutils"].prefix
+      binutils = Formula["nativeos/i386-elf-toolchain/i386-elf-binutils"].prefix
       ln_sf "#{binutils}/i386-elf", "#{prefix}/i386-elf"
     end
   end
